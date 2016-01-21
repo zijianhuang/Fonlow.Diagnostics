@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Fonlow.Diagnostics</id>
+    <version>$version$</version>
+    <title>Fonlow Diagnostics</title>
+    <authors>Zijian Huang</authors>
+    <owners>Zijian Huang</owners>
+    <licenseUrl>https://github.com/zijianhuang/Fonlow.Diagnostics/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/zijianhuang/Fonlow.Diagnostics</projectUrl>
+    <iconUrl>https://github.com/zijianhuang/Fonlow.Diagnostics</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>TraceSource extensions and helpers</description>
+    <releaseNotes>Initial</releaseNotes>
+    <copyright>Copyright © Fonlow 2016</copyright>
+    <tags>c# diagnostics logging</tags>
+  </metadata>
+</package>
