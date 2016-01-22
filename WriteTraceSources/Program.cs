@@ -12,14 +12,32 @@ namespace WriteTraceSources
     {
         static void Main(string[] args)
         {
-            AssemblyTrace.TraceWarning("I would WriteSomething");
-            AssemblyTrace.TraceInformation("I would WriteSomething");
-            AssemblyTrace.WriteLine("I would be OK");
+
             //var mySource = new System.Diagnostics.TraceSource("MySource");
             //mySource.TraceWarning("MySource is quite OK");
 
             TraceSources.Instance["MySource"].TraceWarning("MyTrace Warning is OK");
-            MyAppTraceSources.Logic1Source.TraceWarning("Logic1 warning.");
+
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            for (int i = 0; i < 200; i++)
+            {
+                AssemblyTrace.TraceWarning("I would WriteSomething");
+                AssemblyTrace.TraceInformation("I would WriteSomething");
+                AssemblyTrace.WriteLine("I would be OK");
+                AssemblyTrace.TraceError("error error");
+                AssemblyTrace.WriteLine("hahahaha");
+            }
+
+
+            //for (int i = 0; i < 500; i++)
+            //{
+            //    MyAppTraceSources.Logic1Source.TraceWarning("Logic1 warning.");
+            //    MyAppTraceSources.Logic1Source.TraceError("Logic1 error.");
+            //}
+
+
+            stopwatch.Stop();
+            Trace.TraceInformation("1000 calls takes: " + stopwatch.Elapsed);
 
         }
     }
